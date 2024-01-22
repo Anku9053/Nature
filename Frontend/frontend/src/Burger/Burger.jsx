@@ -23,14 +23,13 @@ const StyledBurger = styled.button`
   div {
     width: 2rem;
     height: 0.25rem;
-    background: ${({ open }) => (open ? "white" : "black")};
-    border-radius: 10px;
-    transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
+    background: ${({ open }) => (open ? "black" : "white")};
+    margin: 0.2rem 0;
+    border-radius: 20px;
+    transition: background 0.3s linear;
 
     :first-child {
-      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
 
     :nth-child(2) {
@@ -39,7 +38,7 @@ const StyledBurger = styled.button`
     }
 
     :nth-child(3) {
-      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
   }
 `;
